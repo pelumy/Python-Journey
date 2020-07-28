@@ -1,3 +1,4 @@
+import example
 def greet(name):
     '''greets the person passed in as a parameter'''
     print(f'Hello, {name}. Good morning')
@@ -39,3 +40,26 @@ def arb(*names):
         print(f'hello {name}')
 
 arb('Monica', 'Luke', 'Steve', 'John')
+
+#recursion
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(4))
+
+#anonymous/lambda fnx
+double = lambda x: x*2
+print(double(5))
+
+my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+new_list = list(filter(lambda x: (x%2==0), my_list))
+print(new_list)
+
+#module
+mod = example.add(4,5.5)
+print (mod)
+print(dir(example))
+print(dir())
