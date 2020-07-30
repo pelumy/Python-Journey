@@ -63,3 +63,61 @@ mod = example.add(4,5.5)
 print (mod)
 print(dir(example))
 print(dir())
+
+def outer():
+    first_num = 1
+    def inner():
+        first_num = 0
+        second_num = 1
+        print('inner - second_num is: ', second_num)
+    inner()
+    print('outer - first_num is: ', first_num)
+
+    
+outer()
+
+def oute():
+    first_num = 1
+    def inne():
+        nonlocal first_num
+        first_num = 0
+        second_num = 1
+        print(f'inner- second is {second_num}')
+    inne()
+    print(f'outer - first is {first_num}')
+
+oute()
+
+def sum_list(mylist):
+    list_sum = 0
+    for items in mylist:
+        list_sum += items
+    return list_sum
+
+lis = [1,2,3,4,5,6,7,8,9,10]
+print(sum_list(lis))
+
+def contains_a(string, el):
+    count = 0
+    for i in string:
+        if (i == el):
+            count+=1
+    return count
+
+the_string = 'saandala'
+print(contains_a(the_string, 'a')) 
+
+def contains_letter(myl, letter):
+    for i in myl:
+        if (i == letter):
+            continue
+        print(f'yes, the list contains letter {i}')
+
+
+print(contains_letter([1,2,3,4,4,5], 4))
+
+number = 'sas'
+# while number in range (0,15):
+if(number == number[::-1]):
+    print(number)
+        # number += 2
