@@ -28,3 +28,4 @@ pala = ['a', 'b', 'c', 'd']
 for i, j in enumerate(pala):
     print(i,j)
     
+    # looping and printing index values
